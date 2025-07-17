@@ -7,7 +7,7 @@ export default function Payment() {
     const router = useRouter();
 
     const handleCheckout = () => {
-        window.location.href = 'https://buy.stripe.com/test_cNi8wR4RPelc3A2d1Basg00';
+        window.location.href = 'https://buy.stripe.com/6oU4gAc858wFeeYcHxf3a00';
     };
 
     return (
