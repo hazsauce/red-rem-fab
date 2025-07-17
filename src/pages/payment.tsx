@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './payment.module.css';
 import Header from '../components/Header';
 import { useRouter } from 'next/router';
