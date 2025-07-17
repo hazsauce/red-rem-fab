@@ -34,6 +34,20 @@
     text-align: center;
 }
 
+.blurb {
+    font-size: 0.875rem;
+    color: #333;
+    margin-top: 0.25rem;
+    text-align: center;
+    user-select: none;
+    font-weight: 1000; /* optional */
+}
+
+@media (max-width: 600px) {
+    .blurb {
+        font-size: .75rem;
+    }
+}
 /* Empty div on right to balance */
 .header > div:last-child {
     width: 48px; /* same as approx logo width */
@@ -42,18 +56,21 @@
 /* Smaller on mobile */
 @media (max-width: 600px) {
     .header {
-        padding: 0.75rem 1rem;
+        flex-direction: column;
+        align-items: center;
     }
 
     .logoImage {
-        height: 30px;
+        height: 40px;
+        padding-bottom: 2px;
     }
 
     .companyName {
-        font-size: 1.2rem;
+        text-align: center;
+        width: 100%;
     }
 
     .header > div:last-child {
-        width: 30px;
+        display: none; /* Hide the spacer on mobile */
     }
 }

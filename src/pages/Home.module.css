@@ -84,26 +84,45 @@
     font-size: 1rem;
 }
 
-/* This is the Pay Online button*/
 .button {
     background-color: #980200;
     color: white;
     border: none;
-    padding: 0.75rem 1.25rem;
-    font-weight: 600;
-    border-radius: 0.25rem;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 2rem; /* increase this value as needed to space further away from social media links*/
+    width: 100%;
+    max-width: 300px;
+    margin-top: 1rem;
 }
 
+/* This is the Pay Online button*/
+.payButton {
+    margin: 1rem auto;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    display: block;
+    width: 90%; /* Slightly less wide on mobile */
+    max-width: 300px;
+    background-color: #980200;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.payButton:hover {
+    background-color: #660019;
+}
 .button:hover {
     background-color: #660019;
 }
 
 .socialLinks {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     color: #980200;
     margin-bottom: 2rem;
@@ -120,9 +139,43 @@
 
 .socialLink:hover {
     text-decoration: underline;
+    color: #660019
 }
 
 .icon {
     width: 20px;
     height: 20px;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.button:focus,
+.payButton:focus,
+.socialLink:focus {
+    outline: 2px solid #660019;
+    outline-offset: 2px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.iconOnly {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.iconOnly:hover {
+    transform: scale(1.1);
+}
+@media (max-width: 768px) {
+    .payButton {
+        width: 90%;
+    }
 }

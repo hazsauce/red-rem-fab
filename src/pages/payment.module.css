@@ -11,7 +11,7 @@
 .title {
     font-size: 2rem;
     font-weight: 700;
-    color: #800020; /* burgundy */
+    color: #980200; /* burgundy */
     margin-bottom: 1rem;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .button {
-    background-color: #800020; /* burgundy */
+    background-color: #980200; /* burgundy */
     color: white;
     font-size: 1.2rem;
     padding: 1rem 2rem;

@@ -32,10 +32,10 @@ export default function Home() {
         `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nPreferred Language: ${formData.preferredLanguage}\n\nMessage:\n${formData.message}`
     );
 
-    window.location.href = `mailto:test@redremingtonfab.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:redremingtonfab@outlook.com?subject=${subject}&body=${body}`;
 
-    // Could clear form (or keep as is) ???
-    // setFormData({ name: '', email: '', message: '' });
+    // Optional: clear form or set status message
+    // setFormData({ name: '', email: '', message: '', phone: '', preferredLanguage: 'English' });
     // setStatus('✅ Ready to send your email!');
   };
 
@@ -45,9 +45,44 @@ export default function Home() {
 
         {/* Main Section */}
         <main className={styles.main}>
+          {/* Socials Section & Pay Online Button */}
+          <section className={styles.socialSection}>
+            <button
+                onClick={() => router.push('/payment')}
+                className={styles.payButton}
+            >
+              Pay Online
+            </button>
+
+            <h2 className={styles.socialTitle}>Find us on:</h2>
+            <div className={styles.socialLinks}>
+              <a
+                  href="https://www.tiktok.com/@red.redmington.fa"
+                  target="_blank"
+                  rel="noreferrer"
+              >
+                <img src="/assets/tiktok-icon.png" alt="TikTok" className={styles.iconOnly} />
+              </a>
+              <a
+                  href="https://www.facebook.com/redremingtonfab"
+                  target="_blank"
+                  rel="noreferrer"
+              >
+                <img src="/assets/facebook-icon.png" alt="Facebook" className={styles.iconOnly} />
+              </a>
+            </div>
+            {/* Contact Info Block */}
+            <div className={styles.contactInfo}>
+              <h2 className={styles.contactTitle}>About Us</h2>
+              <p><strong>Email:</strong> redremingtonfab@outlook.com</p>
+              <p><strong>Phone:</strong> (432) 924-8666</p>
+              <p><strong>Location:</strong> Odessa, TX</p>
+            </div>
+          </section>
+
           {/* Contact Form */}
           <section className={styles.contactForm}>
-            <h2 className={styles.contactTitle}>Contact Us</h2>
+            <h2 className={styles.contactTitle}>Contact us</h2>
             <form onSubmit={handleSubmit}>
               <input
                   type="text"
@@ -99,36 +134,6 @@ export default function Home() {
               </button>
             </form>
             {status && <p>{status}</p>}
-          </section>
-
-          {/* Socials Section & Pay Online Button */}
-          <section className={styles.socialSection}>
-            <h2 className={styles.socialTitle}>Find us on:</h2>
-            <div className={styles.socialLinks}>
-              <a
-                  href="https://www.tiktok.com/@red.redmington.fa"
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.socialLink}
-              >
-                {/* Place <img/> tag here when ready to add socials icons */}
-                TikTok
-              </a>
-              <a
-                  href="https://www.facebook.com/redremingtonfab"
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.socialLink}
-              >
-                {/* Place <img/> tag here when ready to add socials icons */}
-                Facebook
-              </a>
-
-            </div>
-            <button
-                onClick={() => router.push('/payment')} className={styles.button}>
-              Pay Online
-            </button>
           </section>
         </main>
       </div>
