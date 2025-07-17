@@ -1,0 +1,59 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space */
+    background-color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Logo container on the left */
+.logoContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Logo size */
+.logoImage {
+    height: 40px;
+    width: auto;
+    max-width: 100%;
+}
+
+/* Company name centered */
+.companyName {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #800020; /* burgundy */
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Empty div on right to balance */
+.header > div:last-child {
+    width: 48px; /* same as approx logo width */
+}
+
+/* Smaller on mobile */
+@media (max-width: 600px) {
+    .header {
+        padding: 0.75rem 1rem;
+    }
+
+    .logoImage {
+        height: 30px;
+    }
+
+    .companyName {
+        font-size: 1.2rem;
+    }
+
+    .header > div:last-child {
+        width: 30px;
+    }
+}

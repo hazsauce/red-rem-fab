@@ -1,0 +1,68 @@
+.container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #800020; /* burgundy */
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 2rem;
+}
+
+.button {
+    background-color: #800020; /* burgundy */
+    color: white;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:disabled {
+    background-color: #b34759;
+    cursor: not-allowed;
+}
+
+.button:hover:not(:disabled) {
+    background-color: #660019;
+}
+.backLinkContainer {
+    max-width: 600px;
+    margin: 1rem auto 0;
+    padding-left: 2rem; /* align with content padding */
+}
+
+.backLink {
+    background: none;
+    border: none;
+    color: #800020; /* burgundy */
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    user-select: none;
+    transition: color 0.2s ease;
+}
+
+.backLink:hover,
+.backLink:focus {
+    color: #660019;
+    outline: none;
+}
