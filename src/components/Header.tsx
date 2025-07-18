@@ -32,7 +32,7 @@ export default function Header() {
                 onKeyDown={e => e.key === 'Enter' && router.push('/')}
             >
                 RED REMINGTON FAB
-                <div className={styles.blurb}>CUSTOM CNC FABRICATION & WELDING</div>
+                <div className={styles.blurb}>CNC PLASMA CUTTING & CUSTOM FABRICATION</div>
             </div>
 
             <div style={{ width: '48px' }}>{/* empty to balance flex */}</div>

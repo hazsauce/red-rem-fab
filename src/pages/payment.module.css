@@ -9,14 +9,14 @@
 }
 
 .title {
-    font-size: 2rem;
+    font-size: 40px;
     font-weight: 700;
     color: #980200; /* burgundy */
     margin-bottom: 1rem;
 }
 
 .description {
-    font-size: 1.1rem;
+    font-size: 24px;
     color: #444;
     margin-bottom: 2rem;
 }
@@ -24,8 +24,8 @@
 .button {
     background-color: #980200; /* burgundy */
     color: white;
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
+    font-size: 30px;
+    padding: 6px 34px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -51,7 +51,7 @@
     border: none;
     color: #980200; /* burgundy */
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 30px;
     cursor: pointer;
     padding: 0;
     display: inline-flex;

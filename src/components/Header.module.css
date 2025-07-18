@@ -17,14 +17,14 @@
 
 /* Logo size */
 .logoImage {
-    height: 40px;
+    height: 60px;
     width: auto;
     max-width: 100%;
 }
 
 /* Company name centered */
 .companyName {
-    font-size: 1.5rem;
+    font-size: 42px;
     font-weight: 700;
     color: #980200; /* burgundy */
     white-space: nowrap;
@@ -35,9 +35,9 @@
 }
 
 .blurb {
-    font-size: 0.875rem;
+    font-size: 24px;
     color: #333;
-    margin-top: 0.25rem;
+    margin-top: -1rem;
     text-align: center;
     user-select: none;
     font-weight: 1000; /* optional */
@@ -45,7 +45,7 @@
 
 @media (max-width: 600px) {
     .blurb {
-        font-size: .75rem;
+        font-size: 1rem;
     }
 }
 /* Empty div on right to balance */

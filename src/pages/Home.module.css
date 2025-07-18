@@ -1,5 +1,5 @@
 .container {
-    min-height: 100vh;
+    min-height: 80vh;
     background-color: #f3f4f6; /* light gray */
     color: #333;
     display: flex;
@@ -23,7 +23,7 @@
     flex: 1;
     text-align: center;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 40px;
     color: #980200; /* burgundy */
 }
 
@@ -37,8 +37,7 @@
     max-width: 1120px;
     margin: 2rem auto;
     gap: 2rem;
-    padding: 0 1.5rem;
-
+    padding: .5rem;
     flex-direction: row;
 }
 
@@ -53,7 +52,9 @@
 .socialSection {
     flex: 1;
     background-color: #ffffff;
-    padding: 2rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -61,8 +62,8 @@
 .contactTitle,
 .socialTitle {
     font-weight: 600;
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
+    font-size: 36px;
+    margin-bottom: 1rem;
     color: #980200;
 }
 
@@ -72,7 +73,7 @@
     border-radius: 0.25rem;
     padding: 0.5rem;
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 20px;
 }
 
 .textarea {
@@ -81,27 +82,27 @@
     border-radius: 0.25rem;
     padding: 0.5rem;
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 20px;
 }
 
 .button {
     background-color: #980200;
     color: white;
     border: none;
-    padding: 12px 24px;
-    font-size: 1.1rem;
+    padding: 6px 34px;
+    font-size: 30px;
     border-radius: 6px;
     cursor: pointer;
     width: 100%;
     max-width: 300px;
-    margin-top: 1rem;
+    margin: 1rem;
 }
 
 /* This is the Pay Online button*/
 .payButton {
     margin: 1rem auto;
-    padding: 0.75rem 2rem;
-    font-size: 1rem;
+    padding: 6px 2rem;
+    font-size: 30px;
     display: block;
     width: 90%; /* Slightly less wide on mobile */
     max-width: 300px;
@@ -174,6 +175,13 @@
 .iconOnly:hover {
     transform: scale(1.1);
 }
+
+.contactInfo {
+    font-family: "Alumni Sans SC", sans-serif;
+    font-size: 26px;
+    padding-bottom: 1rem;
+}
+
 @media (max-width: 768px) {
     .payButton {
         width: 90%;

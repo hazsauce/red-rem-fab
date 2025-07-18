@@ -74,9 +74,11 @@ export default function Home() {
             {/* Contact Info Block */}
             <div className={styles.contactInfo}>
               <h2 className={styles.contactTitle}>About Us</h2>
+              <div className={styles.contactInfo}>
               <p><strong>Email:</strong> redremingtonfab@outlook.com</p>
               <p><strong>Phone:</strong> (432) 924-8666</p>
               <p><strong>Location:</strong> Odessa, TX</p>
+              </div>
             </div>
           </section>
 
