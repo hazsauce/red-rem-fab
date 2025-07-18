@@ -7,7 +7,7 @@ export default function Custom404() {
         <div className={styles.container}>
             <div className={styles.big404}>404</div>
             <h1 className={styles.title}>Page not found.</h1>
-            <p className={styles.subtitle}>Looks like we couldn't weld this one together.</p>
+            <p className={styles.subtitle}>Looks like we couldn&apos;t weld this one together.</p>
             <Link href="/" className={styles.homeLink}>
                 🔧 Back to Safety
             </Link>
