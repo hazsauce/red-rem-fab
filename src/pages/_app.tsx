@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function App({ Component, pageProps }: AppProps) {
   return ( // *The following is SEO metadata *
@@ -20,6 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <meta charSet="UTF-8" />
         </Head>
         <Component {...pageProps} />
+        <SpeedInsights />
       </>
   );
 }
