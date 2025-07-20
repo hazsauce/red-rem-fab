@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './Home.module.css';
 import { useRouter } from 'next/router';
 import Header from '../components/Header';
+import Head from 'next/head';
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -41,6 +42,27 @@ export default function Home() {
 
   return (
       <div className={styles.container}>
+        <Head>
+          {/* Structured data JSON-LD */}
+          <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: `
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Red Remington Fab LLC",
+                "url": "https://www.redremingtonfab.com",
+                "logo": "https://www.redremingtonfab.com/favicon.ico",
+                "sameAs": [
+                  "https://www.facebook.com/redremingtonfab",
+                  "https://www.tiktok.com/@red.redmington.fa"
+                ]
+              }
+              `,
+              }}
+          />
+        </Head>
         <Header />
 
         {/* Main Section */}
