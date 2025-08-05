@@ -43,6 +43,16 @@ export default function Home() {
   return (
       <div className={styles.container}>
         <Head>
+          {/* Open Graph for social sharing */}
+          <meta property="og:title" content="Red Remington Fab | Custom Metal Fabrication" />
+          <meta
+              property="og:description"
+              content="Looking for expert metal fabrication? Red Remington Fab delivers quality and reliability in Odessa, TX."
+          />
+          <meta property="og:url" content="https://www.redremingtonfab.com/" />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content="https://www.redremingtonfab.com/assets/red-rem-logo.png" />
+
           {/* Structured data JSON-LD */}
           <script
               type="application/ld+json"
@@ -99,7 +109,8 @@ export default function Home() {
               <div className={styles.contactInfo}>
               <p><strong>Email:</strong> redremingtonfab@outlook.com</p>
               <p><strong>Phone:</strong> (432) 924-8666</p>
-              <p><strong>Location:</strong> Odessa, TX</p>
+              <p><strong>Location:</strong> 11349 Rick St.
+                Odessa, TX 79763</p>
               </div>
             </div>
           </section>

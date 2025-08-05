@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './payment.module.css';
 import Header from '../components/Header';
 import { useRouter } from 'next/router';
+import Head from 'next/head'
 
 export default function Payment() {
     const router = useRouter();
@@ -12,6 +13,16 @@ export default function Payment() {
 
     return (
         <>
+            <Head>
+                <title>Pay Online | Red Remington Fab</title>
+                <meta name="description" content="Secure online payment for Red Remington Fab." />
+                {/* Open Graph tags */}
+                <meta property="og:title" content="Pay Online | Red Remington Fab" />
+                <meta property="og:description" content="Secure online payment portal for Red Remington Fab’s services." />
+                <meta property="og:url" content="https://www.redremingtonfab.com/payment" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://www.redremingtonfab.com/assets/red-rem-logo.png" />
+            </Head>
             <Header />
             <div className={styles.pageBackground}>
                 <div className={styles.backLinkContainer}>
