@@ -1,0 +1,134 @@
+.backLinkContainer {
+    max-width: 600px;
+    padding-top: 0.5rem;
+    padding-left: 0;
+}
+
+.backLink {
+    background: none;
+    border: none;
+    color: #980200; /* burgundy */
+    font-weight: 600;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    user-select: none;
+    transition: color 0.2s ease;
+}
+
+.backLink:hover,
+.backLink:focus {
+    color: #660019;
+    outline: none;
+}
+
+.galleryContainer {
+    padding: 0;
+    text-align: center;
+    background-color: #f3f4f6; /* match homepage background */
+    min-height: 100vh;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #980200; /* brand color */
+    margin-bottom: 0.5rem;
+    margin-top: -1rem;
+}
+
+.galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.card {
+    background: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden; /* ensures image doesn't overflow card */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover; /* fills area, cropping as needed */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.itemTitle {
+    font-size: 2rem;
+    margin: 0.5rem 0 0.25rem;
+    color: #333;
+    text-align: center;
+}
+
+.price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #980200;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.socialSection {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.socialTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #980200;
+    margin-bottom: 1rem;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.iconOnly {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+.iconOnly:hover {
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+    .galleryContainer {
+        padding: 0;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .galleryGrid {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .itemTitle {
+        font-size: 1.1rem;
+    }
+
+    .price {
+        font-size: 0.95rem;
+    }
+}

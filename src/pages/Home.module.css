@@ -35,7 +35,7 @@
     display: flex;
     flex: 1;
     max-width: 1120px;
-    margin: 2rem auto;
+    margin: 0 auto;
     gap: 2rem;
     padding: .5rem;
     flex-direction: row;
@@ -98,25 +98,6 @@
     margin: 1rem;
 }
 
-/* This is the Pay Online button*/
-.payButton {
-    margin: 1rem auto;
-    padding: 6px 2rem;
-    font-size: 30px;
-    display: block;
-    width: 90%; /* Slightly less wide on mobile */
-    max-width: 300px;
-    background-color: #980200;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-bottom: 2rem;
-}
-
-.payButton:hover {
-    background-color: #660019;
-}
 .button:hover {
     background-color: #660019;
 }
@@ -129,6 +110,7 @@
     margin-bottom: 2rem;
     text-decoration: none;
 }
+
 .socialLink {
     display: flex;
     align-items: center;
@@ -140,7 +122,7 @@
 
 .socialLink:hover {
     text-decoration: underline;
-    color: #660019
+    color: #660019;
 }
 
 .icon {
@@ -151,8 +133,9 @@
 }
 
 .button:focus,
-.payButton:focus,
-.socialLink:focus {
+.socialLink:focus,
+.viewGalleryButton:focus,
+.actionButton:focus {
     outline: 2px solid #660019;
     outline-offset: 2px;
     transition: color 0.3s ease, background-color 0.3s ease;
@@ -182,8 +165,42 @@
     padding-bottom: 1rem;
 }
 
+/* === Our Work + Pay Online buttons container === */
+.workPayContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem 2rem;          /* small gap between buttons */
+    margin: 1rem 0;     /* tighter spacing */
+    flex-wrap: wrap;    /* allow wrapping on mobile */
+}
+
+/* Shared style for both buttons */
+.actionButton {
+    background-color: #980200;
+    color: white;
+    border: none;
+    padding: 10px 2rem;
+    font-size: 26px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 220px;        /* uniform width for both */
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.actionButton:hover {
+    background-color: #660019;
+}
+
+/* On small screens, stack vertically */
 @media (max-width: 768px) {
-    .payButton {
+    .workPayContainer {
+        flex-direction: column;
+    }
+
+    .actionButton {
         width: 90%;
+        max-width: 300px;
     }
 }

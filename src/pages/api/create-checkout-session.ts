@@ -16,6 +16,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(400).json({ error: 'Invalid amount' });
     }
 
+    // Calculate total amount including 3% fee
+    const fee = amount * 0.03;
+    const totalAmount = amount + fee;
+
+    // Stripe expects amount in cents, rounded to nearest integer
+    const unitAmountInCents = Math.round(totalAmount * 100);
+
     const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
         line_items: [
@@ -23,9 +30,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 price_data: {
                     currency: 'usd',
                     product_data: {
-                        name: 'Custom Payment to Red Remington Fab',
+                        name: 'Custom Payment to Red Remington Fab (includes 3% processing fee)',
                     },
-                    unit_amount: Math.round(amount * 100), // Convert dollars to cents
+                    unit_amount: unitAmountInCents,
                 },
                 quantity: 1,
             },
