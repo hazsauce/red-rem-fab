@@ -1,6 +1,7 @@
 .container {
     min-height: 80vh;
     background-color: #f3f4f6; /* light gray */
+    padding-bottom: 4rem;
     color: #333;
     display: flex;
     flex-direction: column;

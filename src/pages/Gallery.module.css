@@ -26,7 +26,7 @@
 }
 
 .galleryContainer {
-    padding: 0;
+    padding-bottom: 2rem;
     text-align: center;
     background-color: #f3f4f6; /* match homepage background */
     min-height: 100vh;
@@ -44,7 +44,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    padding: 0 1rem;
+    padding: 0 2rem;
 }
 
 .card {
@@ -71,7 +71,7 @@
 }
 
 .price {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #980200;
     text-align: center;
@@ -80,6 +80,7 @@
 
 .socialSection {
     margin-top: 1rem;
+    margin-bottom: 0rem;
     text-align: center;
 }
 
@@ -111,6 +112,7 @@
 @media (max-width: 768px) {
     .galleryContainer {
         padding: 0;
+        padding-bottom: 2rem;
     }
 
     .title {
@@ -121,7 +123,11 @@
 
     .galleryGrid {
         gap: 1rem;
-        padding: 1rem;
+        padding: 0.5rem;
+    }
+
+    .socialSection{
+        margin-top: 0.5rem;
     }
 
     .itemTitle {
