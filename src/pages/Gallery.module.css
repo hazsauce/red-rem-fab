@@ -80,7 +80,7 @@
 
 .socialSection {
     margin-top: 1rem;
-    margin-bottom: 0rem;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
@@ -127,7 +127,7 @@
     }
 
     .socialSection{
-        margin-top: 0.5rem;
+        margin: 0.5rem auto 1rem;
     }
 
     .itemTitle {

@@ -3,6 +3,7 @@ import styles from './Home.module.css';
 import { useRouter } from 'next/router';
 import Header from '../components/Header';
 import Head from 'next/head';
+import Footer from '../components/Footer';
 
 export default function Home() {
     const [formData, setFormData] = useState({
@@ -112,10 +113,30 @@ export default function Home() {
                     <div className={styles.contactInfo}>
                         <h2 className={styles.contactTitle}>About Us</h2>
                         <div className={styles.contactInfo}>
-                            <p><strong>Email:</strong> redremingtonfab@outlook.com</p>
-                            <p><strong>Phone:</strong> (432) 924-8666</p>
-                            <p><strong>Location:</strong> 11349 Rick St.
-                                Odessa, TX 79763</p>
+                            <p>
+                                <strong>Email:</strong>{" "}
+                                <a href={"mailto:redremingtonfab@outlook.com"} className={styles.contactLink}>
+                                   redremingtonfab@outlook.com
+                                </a>
+                            </p>
+                            <p>
+                                <strong>Phone:</strong>{" "}
+                                <a href={"tel:+14329248666"} className={styles.contactLink}>
+                                    (432) 924-8666
+                                </a>
+                            </p>
+                            <p>
+                                <strong>Location:</strong>{" "}
+                                <a
+                                    href="https://maps.app.goo.gl/7rvgB2HYBUfugEKm8"
+                                    target={"_blank"}
+                                    rel="noopener noreferrer"
+                                    className={styles.contactLink}
+                                >
+                                    11349 Rick St.
+                                    Odessa, TX 79763
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -176,6 +197,7 @@ export default function Home() {
                     {status && <p>{status}</p>}
                 </section>
             </main>
+            <Footer/>
         </div>
     );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Gallery.module.css";
 import Header from "../components/Header";
 import { useRouter } from 'next/router';
+import Footer from "../components/Footer";
 
 export default function Gallery() {
     const router = useRouter();
@@ -67,6 +68,7 @@ export default function Gallery() {
                     </div>
                 </section>
             </main>
+            <Footer />
         </div>
     );
 }

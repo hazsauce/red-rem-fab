@@ -3,6 +3,7 @@ import styles from './payment.module.css';
 import Header from '../components/Header';
 import { useRouter } from 'next/router';
 import Head from 'next/head'
+import Footer from '../components/Footer';
 
 export default function Payment() {
     const router = useRouter();
@@ -43,6 +44,7 @@ export default function Payment() {
                         Pay Online
                     </button>
                 </div>
+                <Footer />
             </div>
         </>
 
