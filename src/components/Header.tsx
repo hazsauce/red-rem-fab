@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Header.module.css';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 export default function Header() {
     const router = useRouter();
@@ -15,11 +16,14 @@ export default function Header() {
                 aria-label="Go to home page"
                 onKeyDown={e => e.key === 'Enter' && router.push('/')}
             >
-                <img
+                <Image
                     src="/assets/red-rem-logo.png"
                     alt="Red Remington Fab Logo"
                     className={styles.logoImage}
                     draggable={false}
+                    height={60}
+                    width={60}
+                    priority
                 />
             </div>
 

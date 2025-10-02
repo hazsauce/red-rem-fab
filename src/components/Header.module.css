@@ -1,10 +1,9 @@
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Distribute space */
+    justify-content: space-between; /* Logo left, name centered, spacer right */
     background-color: #CDCDCD;
     padding: 1rem 2rem;
-
 }
 
 /* Logo container on the left */
@@ -15,7 +14,7 @@
     user-select: none;
 }
 
-/* Logo size */
+/* Logo size (fixed height) */
 .logoImage {
     height: 60px;
     width: auto;
@@ -24,7 +23,7 @@
 
 /* Company name centered */
 .companyName {
-    font-size: 42px;
+    font-size: 2.5rem;
     font-weight: 700;
     color: #980200; /* burgundy */
     white-space: nowrap;
@@ -32,45 +31,49 @@
     user-select: none;
     flex-grow: 1;
     text-align: center;
+    line-height: 1.2;
 }
 
+/* Blurb under company name */
 .blurb {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #333;
-    margin-top: -1rem;
+    margin-top: -0.5rem;
     text-align: center;
     user-select: none;
-    font-weight: 1000; /* optional */
 }
 
-@media (max-width: 600px) {
-    .blurb {
-        font-size: 1rem;
-    }
-}
-/* Empty div on right to balance */
+/* Empty div on right to balance flex layout */
 .header > div:last-child {
-    width: 48px; /* same as approx logo width */
+    width: 60px; /* matches logo width */
 }
 
-/* Smaller on mobile */
+/* Mobile adjustments */
 @media (max-width: 600px) {
     .header {
         flex-direction: column;
         align-items: center;
+        text-align: center;
+        padding: 0.75rem 1rem;
     }
 
     .logoImage {
         height: 40px;
-        padding-bottom: 2px;
+        width: auto;
+        margin-bottom: 0.25rem;
     }
 
     .companyName {
-        text-align: center;
-        width: 100%;
+        font-size: 1.8rem;
+        white-space: normal; /* allow wrapping */
+    }
+
+    .blurb {
+        font-size: 1rem;
+        margin-top: 0.25rem;
     }
 
     .header > div:last-child {
-        display: none; /* Hide the spacer on mobile */
+        display: none; /* hide spacer on mobile */
     }
 }

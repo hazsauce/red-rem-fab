@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Header from '../components/Header';
 import Head from 'next/head';
 import Footer from '../components/Footer';
+import Image from "next/image";
 
 export default function Home() {
     const [formData, setFormData] = useState({
@@ -99,14 +100,26 @@ export default function Home() {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <img src="/assets/tiktok-icon.png" alt="TikTok" className={styles.iconOnly} />
+                            <Image
+                                src="/assets/tiktok-icon.png"
+                                alt="TikTok"
+                                className={styles.iconOnly}
+                                height={40}
+                                width={40}
+                            />
                         </a>
                         <a
                             href="https://www.facebook.com/redremingtonfab"
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <img src="/assets/facebook-icon.png" alt="Facebook" className={styles.iconOnly} />
+                            <Image
+                                src="/assets/facebook-icon.png"
+                                alt="Facebook"
+                                className={styles.iconOnly}
+                                height={40}
+                                width={40}
+                            />
                         </a>
                     </div>
                     {/* Contact Info Block */}
