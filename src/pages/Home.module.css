@@ -94,20 +94,21 @@
     font-size: 20px;
 }
 
-.button {
+.sendButton {
     background-color: #980200;
     color: white;
     border: none;
-    padding: 6px 34px;
+    padding: 10px 2rem;
     font-size: 30px;
     border-radius: 6px;
     cursor: pointer;
-    width: 100%;
-    max-width: 300px;
-    margin: 1rem;
+    display: block;
+    margin: 1rem auto;
+    width: 220px;
+    text-align: center;
 }
 
-.button:hover {
+.sendButton:hover {
     background-color: #660019;
 }
 
@@ -141,7 +142,7 @@
     vertical-align: middle;
 }
 
-.button:focus,
+.sendButton:focus,
 .socialLink:focus,
 .viewGalleryButton:focus,
 .actionButton:focus {
@@ -177,9 +178,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem 2rem;          /* small gap between buttons */
-    margin: 1rem 0;     /* tighter spacing */
-    flex-wrap: wrap;    /* allow wrapping on mobile */
+    gap: 1rem 2rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
 }
 
 /* Shared style for both buttons */
@@ -188,7 +189,7 @@
     color: white;
     border: none;
     padding: 10px 2rem;
-    font-size: 26px;
+    font-size: 30px;
     border-radius: 6px;
     cursor: pointer;
     width: 220px;        /* uniform width for both */
@@ -210,4 +211,11 @@
         width: 90%;
         max-width: 300px;
     }
+
+    .sendButton {
+        width: 90%;
+        max-width: 300px;
+        font-size: 24px;
+    }
+
 }

@@ -203,7 +203,7 @@ export default function Home() {
                             onChange={handleChange}
                             required
                         />
-                        <button type="submit" className={styles.button}>
+                        <button type="submit" className={styles.sendButton}>
                             Send
                         </button>
                     </form>
