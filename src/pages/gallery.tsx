@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import styles from "./Gallery.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -33,13 +33,18 @@ export default function Gallery() {
     };
 
     // Close modal
-    const closeModal = () => setModalOpen(false);
+    const closeModal = useCallback(() => {
+        setModalOpen(false);
+        setCurrentIndex(0);
+    }, []);
 
     // Navigate images
-    const prevImage = () =>
+    const prevImage = useCallback(() => {
         setCurrentIndex((prev) => (prev === 0 ? items.length - 1 : prev - 1));
-    const nextImage = () =>
+    }, [items.length]);
+    const nextImage = useCallback(() => {
         setCurrentIndex((prev) => (prev === items.length - 1 ? 0 : prev + 1));
+    }, [items.length]);
 
     // Keyboard navigation
     useEffect(() => {
@@ -51,7 +56,7 @@ export default function Gallery() {
         };
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [modalOpen]);
+    }, [modalOpen, prevImage, nextImage, closeModal]);
 
     return (
         <div className={styles.galleryContainer}>
