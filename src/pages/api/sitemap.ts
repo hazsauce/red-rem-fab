@@ -6,9 +6,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const staticPages = [
         '',
         '/payment',
+        '/gallery',
         // FUTURE ROUTES
         // '/services',
-        // '/gallery',
         // '/contact',
         // '/about',
         // Add other static routes here

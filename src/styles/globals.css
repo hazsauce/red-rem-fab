@@ -29,3 +29,15 @@ body {
   font-weight: 700;
   font-style: normal;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100dvh; /* always takes up visible viewport */
+  background-color: #f3f4f6; /* your global bg if you want */
+}
+
