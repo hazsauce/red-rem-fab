@@ -1,5 +1,6 @@
 .container {
-    min-height: 100%;
+    min-height: 100vh; /*Fallback for older browsers*/
+    min-height: 100dvh; /* Dynamic viewport heigh for mobile Safari */
     background-color: #f3f4f6; /* light gray */
     padding-bottom: 1rem;
     color: #333;

@@ -30,12 +30,14 @@ export default function Gallery() {
     const openModal = (index: number) => {
         setCurrentIndex(index);
         setModalOpen(true);
+        document.body.style.overflow = "hidden"; // Prevent background scroll
     };
 
     // Close modal
     const closeModal = useCallback(() => {
         setModalOpen(false);
         setCurrentIndex(0);
+        document.body.style.overflow = ""; // Restore scrolling
     }, []);
 
     // Navigate images

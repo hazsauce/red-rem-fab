@@ -26,7 +26,7 @@ export default function Document() {
             <link rel="manifest" href="/manifest.json" />
 
             {/* Optional: theme color for mobile address bar */}
-            <meta name="theme-color" content="#ffffff" />
+            <meta name="theme-color" content="#980200" />
         </Head>
         <body className="antialiased">
         <Main/>
