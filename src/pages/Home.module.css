@@ -1,13 +1,14 @@
 .container {
-    min-height: 100vh; /*Fallback for older browsers*/
-    min-height: 100dvh; /* Dynamic viewport heigh for mobile Safari */
-    background-color: #f3f4f6; /* light gray */
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: #f3f4f6;
     padding-bottom: 1rem;
     color: #333;
     display: flex;
     flex-direction: column;
 }
 
+/* HEADER */
 .header {
     display: flex;
     align-items: center;
@@ -26,137 +27,90 @@
     text-align: center;
     font-weight: bold;
     font-size: 40px;
-    color: #980200; /* burgundy */
+    color: #980200;
 }
 
 .empty {
     flex: 1;
 }
 
+/* MAIN LAYOUT */
 .main {
     display: flex;
     flex: 1;
     max-width: 1120px;
     margin: 0 auto;
     gap: 2rem;
-    padding: .5rem;
+    padding: 0.5rem;
     flex-direction: row;
 }
 
-.contactLink {
-    transition: color 0.3s ease;
-}
-
-.contactLink:hover {
-    text-decoration: underline;
-}
-
-/* On smaller screens (mobile), stack vertically */
-@media (max-width: 768px) {
-    .main {
-        flex-direction: column;
-    }
-}
-
-.contactForm,
-.socialSection {
+/* LEFT COLUMN (photo + socials card) */
+.leftColumn {
+    display: flex;
+    flex-direction: column;
     flex: 1;
+}
+
+/* SINGLE CARD */
+.shopCard {
     background-color: #ffffff;
-    padding-top: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 1rem 2rem;
     border-radius: 0.5rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+
 }
 
-.contactTitle,
-.socialTitle {
-    font-weight: 600;
-    font-size: 36px;
-    margin-bottom: 1rem;
-    color: #980200;
-}
-
-.input {
+/* IMAGE */
+.shopImageCrop {
     width: 100%;
-    border: 2px solid #ccc;
-    border-radius: 0.25rem;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    font-size: 20px;
+    height: 200px; /* desktop image height */
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-.textarea {
+.shopImage {
     width: 100%;
-    border: 2px solid #ccc;
-    border-radius: 0.25rem;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    font-size: 20px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 44%;
 }
 
-.sendButton {
-    background-color: #980200;
-    color: white;
-    border: none;
-    padding: 10px 2rem;
-    font-size: 30px;
-    border-radius: 6px;
-    cursor: pointer;
-    display: block;
-    margin: 1rem auto;
-    width: 220px;
+/* TEXT */
+.shopText {
     text-align: center;
 }
 
-.sendButton:hover {
-    background-color: #660019;
+.shopText h2 {
+    font-size: 1.8rem;
+}
+
+.shopText p {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+/* SOCIALS + ABOUT */
+.socialSection {
+    margin-top: 1rem;
+}
+
+.socialTitle,
+.contactTitle {
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 1rem;
+    color: #980200;
 }
 
 .socialLinks {
     display: flex;
-    flex-direction: row;
     gap: 1rem;
-    color: #980200;
-    margin-bottom: 2rem;
-    text-decoration: none;
-}
-
-.socialLink {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #980200;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.socialLink:hover {
-    text-decoration: underline;
-    color: #660019;
-}
-
-.icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 0.5rem;
-    vertical-align: middle;
-}
-
-.sendButton:focus,
-.socialLink:focus,
-.viewGalleryButton:focus,
-.actionButton:focus {
-    outline: 2px solid #660019;
-    outline-offset: 2px;
-    transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-.socialIcons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .iconOnly {
@@ -170,53 +124,108 @@
 
 .contactInfo {
     font-family: "Alumni Sans SC", sans-serif;
-    font-size: 26px;
-    padding-bottom: 1rem;
+    font-size: 22px;
 }
 
-/* === Our Work + Pay Online buttons container === */
+/* CONTACT FORM (RIGHT SIDE) */
+.contactForm {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* FORM */
+.input,
+.textarea {
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 18px;
+}
+
+.sendButton {
+    background-color: #980200;
+    color: white;
+    border: none;
+    padding: 10px 2rem;
+    font-size: 26px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    margin: 1rem auto;
+    width: 220px;
+}
+
+.sendButton:hover {
+    background-color: #660019;
+}
+
+/* BUTTONS (TOP) */
 .workPayContainer {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 1rem 2rem;
     margin: 1rem 0;
     flex-wrap: wrap;
 }
 
-/* Shared style for both buttons */
 .actionButton {
     background-color: #980200;
     color: white;
     border: none;
     padding: 10px 2rem;
-    font-size: 30px;
+    font-size: 26px;
     border-radius: 6px;
     cursor: pointer;
-    width: 220px;        /* uniform width for both */
-    text-align: center;
-    transition: background-color 0.3s ease;
+    width: 220px;
 }
 
 .actionButton:hover {
     background-color: #660019;
 }
 
-/* On small screens, stack vertically */
+/* LINKS */
+.contactLink:hover {
+    text-decoration: underline;
+}
+
+/* 📱 MOBILE */
 @media (max-width: 768px) {
-    .workPayContainer {
+    .main {
         flex-direction: column;
     }
 
-    .actionButton {
+    .shopCard {
         width: 90%;
         max-width: 300px;
+        margin: 0 auto;
+    }
+    .shopImageCrop {
+        height: 135px;
+        width: 100%;
+        max-width: 300px;
+        margin: 0;
     }
 
+    .shopImage {
+        width: 100%;
+        border-radius: 10px;
+        object-position: center 44%;
+    }
+
+    .actionButton,
     .sendButton {
         width: 90%;
         max-width: 300px;
-        font-size: 30px;
     }
 
+    .workPayContainer {
+        flex-direction: column;
+        justify-content: center;
+    }
 }

@@ -90,59 +90,59 @@ export default function Home() {
 
             {/* Main Section */}
             <main className={styles.main}>
-                {/* Socials Section & Pay Online Button */}
-                <section className={styles.socialSection}>
 
-                    <h2 className={styles.socialTitle}>Find us on:</h2>
-                    <div className={styles.socialLinks}>
-                        <a
-                            href="https://www.tiktok.com/@red.redmington.fa"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <Image
-                                src="/assets/tiktok-icon.png"
-                                alt="TikTok"
-                                className={styles.iconOnly}
-                                height={40}
-                                width={40}
-                            />
-                        </a>
-                        <a
-                            href="https://www.facebook.com/redremingtonfab"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <Image
-                                src="/assets/facebook-icon.png"
-                                alt="Facebook"
-                                className={styles.iconOnly}
-                                height={40}
-                                width={40}
-                            />
-                        </a>
+                {/* LEFT SIDE: Shop Card */}
+                <section className={styles.shopCard}>
+                    <div className={styles.shopImageCrop}>
+                        <img
+                            src="/assets/red-rem-shop.jpg"
+                            alt="Red Remington Fab shop exterior"
+                            className={styles.shopImage}
+                        />
                     </div>
-                    {/* Contact Info Block */}
-                    <div className={styles.contactInfo}>
-                        <h2 className={styles.contactTitle}>About Us</h2>
+
+                    <div className={styles.shopText}>
+                        <h2>Our Shop</h2>
+                        <p> Where the work gets done. </p>
+                        <p> Red Remington Fab is committed to getting the job done right. </p>
+
+                    </div>
+
+                    <div className={styles.socialSection}>
+                        <h2 className={styles.socialTitle}>Find us on:</h2>
+
+                        <div className={styles.socialLinks}>
+                            <a href="https://www.tiktok.com/@red.redmington.fa" target="_blank" rel="noreferrer">
+                                <Image src="/assets/tiktok-icon.png" alt="TikTok" height={40} width={40} className={styles.iconOnly} />
+                            </a>
+
+                            <a href="https://www.facebook.com/redremingtonfab" target="_blank" rel="noreferrer">
+                                <Image src="/assets/facebook-icon.png" alt="Facebook" height={40} width={40} className={styles.iconOnly} />
+                            </a>
+                        </div>
+
                         <div className={styles.contactInfo}>
+                            <h2 className={styles.contactTitle}>About Us</h2>
+
                             <p>
                                 <strong>Email:</strong>{" "}
-                                <a href={"mailto:redremingtonfab@outlook.com"} className={styles.contactLink}>
-                                   redremingtonfab@outlook.com
+                                <a href="mailto:redremingtonfab@outlook.com" className={styles.contactLink}>
+                                    redremingtonfab@outlook.com
                                 </a>
                             </p>
+
                             <p>
                                 <strong>Phone:</strong>{" "}
-                                <a href={"tel:+14329248666"} className={styles.contactLink}>
+                                <a href="tel:+14329248666" className={styles.contactLink}>
                                     (432) 924-8666
                                 </a>
                             </p>
+
                             <p>
                                 <strong>Location:</strong>{" "}
                                 <a
                                     href="https://maps.app.goo.gl/7rvgB2HYBUfugEKm8"
-                                    target={"_blank"}
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                     className={styles.contactLink}
                                 >
@@ -154,63 +154,33 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* Contact Form */}
+                {/* RIGHT SIDE: Contact Form */}
                 <section className={styles.contactForm}>
                     <h2 className={styles.contactTitle}>Contact us</h2>
-                    <form onSubmit={handleSubmit}>
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Name"
-                            className={styles.input}
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                        />
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Email"
-                            className={styles.input}
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                        />
-                        <input
-                            type="tel"
-                            name="phone"
-                            placeholder="Phone Number"
-                            className={styles.input}
-                            value={formData.phone}
-                            onChange={handleChange}
-                        />
 
-                        <select
-                            name="preferredLanguage"
-                            className={styles.input}
-                            value={formData.preferredLanguage}
-                            onChange={handleChange}
-                        >
+                    <form onSubmit={handleSubmit}>
+                        <input type="text" name="name" placeholder="Name" className={styles.input} value={formData.name} onChange={handleChange} required />
+                        <input type="email" name="email" placeholder="Email" className={styles.input} value={formData.email} onChange={handleChange} required />
+                        <input type="tel" name="phone" placeholder="Phone Number" className={styles.input} value={formData.phone} onChange={handleChange} />
+
+                        <select name="preferredLanguage" className={styles.input} value={formData.preferredLanguage} onChange={handleChange}>
                             <option value="English">English</option>
                             <option value="Spanish">Spanish</option>
                         </select>
-                        <textarea
-                            name="message"
-                            placeholder="Message"
-                            className={styles.textarea}
-                            rows={5}
-                            value={formData.message}
-                            onChange={handleChange}
-                            required
-                        />
+
+                        <textarea name="message" placeholder="Message" className={styles.textarea} rows={5} value={formData.message} onChange={handleChange} required />
+
                         <button type="submit" className={styles.sendButton}>
                             Send
                         </button>
                     </form>
+
                     {status && <p>{status}</p>}
                 </section>
+
             </main>
-            <Footer/>
+
+            <Footer />
         </div>
     );
 }
