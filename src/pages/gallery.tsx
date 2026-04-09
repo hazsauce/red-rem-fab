@@ -10,6 +10,36 @@ export default function Gallery() {
 
     const items = [
         {
+            src: "/assets/Rollout_Wheel_1.jpg",
+            alt: "Rollout Wheel",
+            title: "Rollout Wheel",
+            price: "$950",
+        },
+        {
+            src: "/assets/Rollout_Wheel_2.jpg",
+            alt: "Rollout Wheel",
+            title: "Rollout Wheel",
+            price: "$950",
+        },
+        {
+            src: "/assets/Rollout_Wheel_3.jpg",
+            alt: "Rollout Wheel",
+            title: "Rollout Wheel",
+            price: "$950",
+        },
+        {
+            src: "/assets/Rollout_Wheel_4.jpg",
+            alt: "Rollout Wheel",
+            title: "Rollout Wheel",
+            price: "$950",
+        },
+        {
+            src: "/assets/Rollout_Wheel_5.jpg",
+            alt: "Rollout Wheel",
+            title: "Rollout Wheel",
+            price: "$950",
+        },
+        {
             src: "/assets/rollout-wheel-stand.jpg",
             alt: "Rollout wheel stand for hitch receiver",
             title: "Rollout Wheel Stand for Hitch Receiver",
@@ -131,7 +161,8 @@ export default function Gallery() {
             {modalOpen && (
                 <div className={styles.modal} onClick={closeModal}>
                     <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-                        <button className={`${styles.modalArrow} ${styles['modalArrow-left']}`}onClick={prevImage}>
+                        <button className= {`${styles.modalArrow} ${styles['modalArrow-left']}`}
+                                onClick={prevImage}>
                             ←
                         </button>
                         <Image
