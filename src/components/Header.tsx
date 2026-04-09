@@ -1,26 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Header.module.css';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 
 export default function Header() {
     const router = useRouter();
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 80);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
-        <header className={styles.header}>
+        <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
+
             <div
                 className={styles.logoContainer}
                 onClick={() => router.push('/')}
                 role="button"
                 tabIndex={0}
-                aria-label="Go to home page"
-                onKeyDown={e => e.key === 'Enter' && router.push('/')}
             >
                 <Image
                     src="/assets/red-rem-logo.png"
                     alt="Red Remington Fab Logo"
                     className={styles.logoImage}
-                    draggable={false}
                     height={60}
                     width={60}
                     priority
@@ -32,14 +40,15 @@ export default function Header() {
                 onClick={() => router.push('/')}
                 role="button"
                 tabIndex={0}
-                aria-label="Go to home page"
-                onKeyDown={e => e.key === 'Enter' && router.push('/')}
             >
                 RED REMINGTON FAB
-                <div className={styles.blurb}>CNC PLASMA CUTTING & CUSTOM FABRICATION</div>
+
+                <div className={styles.blurb}>
+                    CNC PLASMA CUTTING & CUSTOM FABRICATION
+                </div>
             </div>
 
-            <div style={{ width: '48px' }}>{/* empty to balance flex */}</div>
+            <div className={styles.spacer} />
         </header>
     );
 }

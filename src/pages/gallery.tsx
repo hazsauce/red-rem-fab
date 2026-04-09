@@ -102,7 +102,6 @@ export default function Gallery() {
                     ← Home
                 </button>
             </div>
-
             <main>
                 <h1 className={styles.title}>Gallery</h1>
 
@@ -122,6 +121,19 @@ export default function Gallery() {
                             <p className={styles.price}>{item.price}</p>
                         </div>
                     ))}
+                </div>
+                <div className={styles.facebookFeed}>
+                    <h2 className={styles.socialTitle}>See More on Facebook:</h2>
+
+                    <iframe
+                        src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/redremingtonfab&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                        width="100%"
+                        height="500"
+                        style={{ border: "none", overflow: "hidden" }}
+                        scrolling="no"
+                        frameBorder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    ></iframe>
                 </div>
 
                 <section className={styles.socialSection}>

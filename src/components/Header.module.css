@@ -1,9 +1,11 @@
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Logo left, name centered, spacer right */
+    justify-content: space-between;
     background-color: #CDCDCD;
     padding: 1rem 2rem;
+    width: 100%;
+    transition: all 0.3s ease;
 }
 
 /* Logo container on the left */
@@ -14,7 +16,7 @@
     user-select: none;
 }
 
-/* Logo size (fixed height) */
+/* Logo size */
 .logoImage {
     height: 60px;
     width: auto;
@@ -25,7 +27,7 @@
 .companyName {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #980200; /* burgundy */
+    color: #980200;
     white-space: nowrap;
     cursor: pointer;
     user-select: none;
@@ -43,12 +45,49 @@
     user-select: none;
 }
 
-/* Empty div on right to balance flex layout */
-.header > div:last-child {
-    width: 60px; /* matches logo width */
+/* Spacer */
+.spacer {
+    width: 60px;
 }
 
-/* Mobile adjustments */
+/* ========================= */
+/* STICKY COLLAPSED HEADER   */
+/* ========================= */
+
+.header.scrolled {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: #CDCDCD; /* same brand color */
+    padding: 6px 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hide original header content when scrolled */
+.header.scrolled .logoContainer,
+.header.scrolled .companyName,
+.header.scrolled .blurb,
+.header.scrolled .spacer {
+    display: none;
+}
+
+/* Only show compact title */
+.header.scrolled::after {
+    content: "Red Remington Fab";
+    color: #980200;
+    font-weight: 700;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+/* ========================= */
+/* MOBILE                   */
+/* ========================= */
+
 @media (max-width: 600px) {
     .header {
         flex-direction: column;
@@ -65,7 +104,7 @@
 
     .companyName {
         font-size: 1.8rem;
-        white-space: normal; /* allow wrapping */
+        white-space: normal;
     }
 
     .blurb {
@@ -73,7 +112,7 @@
         margin-top: 0.25rem;
     }
 
-    .header > div:last-child {
-        display: none; /* hide spacer on mobile */
+    .spacer {
+        display: none;
     }
 }
